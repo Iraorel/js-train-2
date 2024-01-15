@@ -150,10 +150,7 @@ console.log(
 
 // Створюємо функцію з назвою encodeURL, яка приймає один аргумент - url
 function encodeURL(url) {
-  return encodeURI(url)
-  .replace(/%5B/g, "[")
-  .replace(/%5D/g, "]")
-  .replace(
+  return encodeURI(url).replace(
     /[!'()*]/g,
     (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
   );
